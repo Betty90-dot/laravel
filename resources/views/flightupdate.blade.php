@@ -131,6 +131,7 @@
 
 
 </form>
+<a href="admin">Home </a>
 </div>
 
 <div class="col-7">

@@ -3,7 +3,7 @@
 
   <form>
    
-  <table>
+  <table border="1">
     <tr>
       
       <td>Flight Name</td>

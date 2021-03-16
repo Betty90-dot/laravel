@@ -14,37 +14,60 @@
             <!------custom style------->
             <link rel="stylesheet" type="text/css" href="{{asset('/css/index_style.css')}}" media="all"/>
 
-</head> 
-<body>
-<div class="container text-cenetr py-5">
+</head>
+<table class=" table table-dark"> 
+<body class="bg-image"
+style="background-image: url('https://www.thehindubusinessline.com/economy/logistics/r3l07y/article26289997.ece/ALTERNATES/LANDSCAPE_1200/TRIVANDRUMAIRPORT');
+      height: 100vh">
+
+
 <form action="{{url('payment')}}" method="get" class="form">
 
 @csrf
-     Flight id:<input type="text" value="{{$flight['fid']}}" name="flid"><br><br> 
-    Flight Name:<input type="text" value="{{$flight->airlinename}}" name="fname"><br><br>
-    Departure:<input type="text" value="{{$flight->departure}}" name="departure"><br><br>
-    Arrival:<input type="text" value="{{$flight->arrival}}" name="arrival"><br><br>
-    Date:<input type="text" value="{{$flight->date}}" name="date"><br><br>
-    Departure time:<input type="text" value="{{$flight->dtime}}" name="dtime"><br><br>
-    Arrival Time:<input type="text" value="{{$flight->atime}}" name="atime"><br><br>
+
+<tr><td>
+     Flight id:</td>
+     <td><input type="text" value="{{$flight['fid']}}" name="flid"></td><br><br> 
+     </tr><tr><td>
+      Flight Name:</td>
+      <td><input type="text" value="{{$flight->airlinename}}" name="fname"></td><br><br>
+      </tr><tr><td>
+      Departure:</td>
+      <td><input type="text" value="{{$flight->departure}}" name="departure"></td><br><br>
+      </tr><tr><td>Arrival:</td>
+      <td><input type="text" value="{{$flight->arrival}}" name="arrival"></td><br><br>
+      </tr><tr><td>Date:</td>
+      <td><input type="text" value="{{$flight->date}}" name="date"></td><br><br>
+      </tr><tr><td> Departure time:</td>
+      <td><input type="text" value="{{$flight->dtime}}" name="dtime"></td><br><br>
+      </tr><tr><td>Arrival Time:</td>
+      <td><input type="text" value="{{$flight->atime}}" name="atime"></td><br><br>
 
 
-    Name of the passenger:<input type="text" value="{{$user->name}}" name="name"><br><br>
-    Age:<input type="text" value="{{$user->age}}" name="age"><br><br>
+      </tr><tr><td>Name of the passenger:</td>
+      <td><input type="text" value="{{$user->name}}" name="name"></td><br><br>
+      </tr><tr><td>Age:</td>
+      <td><input type="text" value="{{$user->age}}" name="age"></td><br><br>
 
 
-    Seat:<input type="text" value="{{$seat}}" name="seat"><br><br>
+      </tr><tr><td>Seat:</td>
+      <td><input type="text" value="{{$seat}}" name="seat"></td><br><br>
 
-    Cost:<input type="text" value="{{$pay}}" name="pay">
+      </tr><tr><td>Cost:</td>
+      <td><input type="text" value="{{$pay}}" name="pay">
     
     @if($user->age>60)
-        <p>10% Concession Available</p>
+        <p style="color:white">10% Concession Available</p></tr>
 @endif
 <br><br>
-<input type="submit" name="submit" value="R u ready for the payment">
+</tr><tr><td><input type="submit" name="submit" value="R u ready for the payment">
+</td></tr>
 
 </form>
-</div>
+
+
+</table>
+<a href="userhomepage">Home page</a>
 </body>
 </html>
    
